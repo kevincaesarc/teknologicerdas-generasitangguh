@@ -78,7 +78,7 @@
 </head>
 <body>
 	<header>
-		<img src="" alt="" class="logo">
+		<img src="kelompok3.jpeg" class="logo">
 		<h1>Kokulikuler Tema Berteknologi Kelompok 3</h1>
 		<p>"Teknologi Cerdas, Generasi Tangguh"</p>
 	</header>
@@ -96,7 +96,7 @@
 
 	<section>
 			<h2>IPAS</h2>
-			<p></p>
+			<p>Isu sains dan sosial (lingkungan, energi, teknologi ramah lingkungan).</p>
 		</section>
 	<section>
 			<h2>Informatika dan Coding</h2>
@@ -158,5 +158,37 @@
 				</tbody>
 			</table>
 		</section>
+
+	<section>
+		<h2>Kolom Komentar & Saran</h2>
+		<textarea id="commentInput" rows="4" style="width:100%; padding: 10px; border-radius: 8px; border: 1px solid #316CF5;" placeholder="Tulis komentar atau saran kamu..."></textarea>
+		<br><br>
+		<button onclick="addComment()" style="background: #316CF5; color: white; padding: 10px 20px; border: none; border-radius: 8px; cursor: pointer; font-size: 16px;">
+			Kirim Komentar 
+		</button>
+
+		<ul id="commentList" style="margin-top: 20px; list-style-type: square;"></ul>
+	</section>
+
+<script>
+	function addComment() {
+		const input = document.getElementById("commentInput");
+		const comment = input.value.trim();
+
+		if (comment ==="") {
+			alert("Komentar tidak boleh kosong!");
+			return;
+		}
+
+		const li = document.createElement("li");
+		li.textContent =comment;
+		document.getElementById("commentList").appendChild(li);
+		input.value = "";
+	}
+</script>
+	
+	<footer>
+		<p>CopyRight 2025 | Website Lintas Mapel by Pasukan Myob</p>
+	</footer>
 </body>
 </html>
